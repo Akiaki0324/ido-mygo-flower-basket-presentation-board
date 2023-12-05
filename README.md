@@ -4,6 +4,7 @@
 npm run dev
 ```
 然后就可以预览啦。
+
 或者在这玩意[![Deploy Next.js site to Pages](https://github.com/Akiaki0324/ido-mygo-flower-basket-presentation-board/actions/workflows/nextjs.yml/badge.svg)](https://github.com/Akiaki0324/ido-mygo-flower-basket-presentation-board/actions/workflows/nextjs.yml)是绿的情况下，直接访问 [这个仓库的Pages](https://akiaki0324.github.io/ido-mygo-flower-basket-presentation-board/) 。
 
 推荐使用Chrome>100进行预览，使用浏览器的打印功能进行导出。打印的页面设置务必设置为无页边距，以A类纸张（A4、A3等）尺寸横版布局，默认的100%缩放比例。打印机选择你的打印机，或者Chrome自带的另存为PDF。
