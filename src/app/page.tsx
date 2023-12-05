@@ -1,95 +1,49 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Sama from "./sama"
+import React from "react"
+let participantsList: Array<string> = [
+  "迷子A", "迷子A", "迷子A", "迷子A", "迷子A",
+  "迷子A", "迷子A", "迷子A", "迷子A", "迷子A",
+  "迷子A", "迷子A", "迷子A", "迷子A", "迷子A",
+  "迷子A", "迷子A", "迷子A", "迷子A", "迷子A",
+  "迷子A", "迷子A", "迷子A", "迷子A", "迷子A",
+
+]
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div id="bg">
+      <div id="board">
+
+        <h1 id="t1">{"祝  ご出演"}</h1>
+
+        <div id="t2">{"IDO x Bang Dream! It's MyGO!!!!!"}</div>
+
+        <h2 id="guest">
+          <span className="anon">千早愛音<Sama>役</Sama></span>
+          &nbsp;<span className="rana">要楽奈<Sama>役</Sama></span>
+          <br />
+          &nbsp;&nbsp;&nbsp;<span className="anon">立石 凛<Sama>様</Sama></span>
+          <span className="rana">青木 陽菜<Sama>様</Sama></span>
+        </h2>
+
+        <div id="p">
+          {
+            participantsList.map((value, index) => {
+              if (!(index % 5) && index != 0) {
+                return (<React.Fragment key={index}><br /><span className="name-tag" key={index}>{value}&nbsp;</span></React.Fragment>)
+              }
+              return (<span className="name-tag" key={index}>{value}&nbsp;</span>)
+            })}
+          <br />
         </div>
+
+        <div id="special">
+          <div id="host">主催<span className="name-tag" id="host-name">: Akiaki</span></div>
+          <div id="illu">イラスト<div id="illu-zh">(插画)</div> <span className="name-tag" id="illu-name">: Ray</span></div>
+        </div>
+
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   )
 }
