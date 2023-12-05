@@ -1,4 +1,5 @@
 # IDO 邦邦mygo活动的花篮上的展示牌的设计
+[![Deploy Next.js site to Pages](https://github.com/Akiaki0324/ido-mygo-flower-basket-presentation-board/actions/workflows/nextjs.yml/badge.svg)](https://github.com/Akiaki0324/ido-mygo-flower-basket-presentation-board/actions/workflows/nextjs.yml)
 基于react的平面设计。
 ```bash
 npm run dev
