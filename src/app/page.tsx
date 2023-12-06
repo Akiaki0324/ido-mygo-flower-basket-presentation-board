@@ -17,7 +17,7 @@ export default function Home() {
 
         <h1 id="t1">{"祝  ご出演"}</h1>
 
-        <div id="t2">{"IDO x Bang Dream! It's MyGO!!!!!"}</div>
+        <div id="t2">{"IDO x BanG Dream! It's MyGO!!!!!"}</div>
 
         <h2 id="guest">
           <span className="anon">千早愛音<Sama>役</Sama></span>
