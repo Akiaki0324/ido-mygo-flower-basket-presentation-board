@@ -2,6 +2,6 @@ import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLik
 
 export default function Sama({ children }: { children: React.ReactNode }) {
     return (
-        <span className="sama">{children}</span>
+      <span className="sama">{children}</span>
     )
-}
+  }

@@ -1,5 +1,8 @@
-import Sama from "./sama"
 import React from "react"
+import Sama from "../components/Sama"
+import NameTag from "../components/NameTag"
+import NameList from "../components/NameList"
+
 let participantsList: Array<string> = [
   "迷子A", "迷子A", "迷子A", "迷子A", "迷子A",
   "迷子A", "迷子A", "迷子A", "迷子A", "迷子A",
@@ -9,15 +12,13 @@ let participantsList: Array<string> = [
 
 ]
 
-
 export default function Home() {
   return (
     <div id="bg">
       <div id="board">
+        <h1 id="t1">祝  ご出演</h1>
 
-        <h1 id="t1">{"祝  ご出演"}</h1>
-
-        <div id="t2">{"IDO x BanG Dream! It's MyGO!!!!!"}</div>
+        <div id="t2">IDO x BanG Dream! It's MyGO!!!!!</div>
 
         <h2 id="guest">
           <span className="anon">千早愛音<Sama>役</Sama></span>
@@ -27,20 +28,11 @@ export default function Home() {
           <span className="rana">青木 陽菜<Sama>様</Sama></span>
         </h2>
 
-        <div id="p">
-          {
-            participantsList.map((value, index) => {
-              if (!(index % 5) && index != 0) {
-                return (<React.Fragment key={index}><br /><span className="name-tag" key={index}>{value}&nbsp;</span></React.Fragment>)
-              }
-              return (<span className="name-tag" key={index}>{value}&nbsp;</span>)
-            })}
-          <br />
-        </div>
+        <NameList id='p' participantslist={participantsList}></NameList>
 
         <div id="special">
-          <div id="host">主催<span className="name-tag" id="host-name">: Akiaki</span></div>
-          <div id="illu">イラスト<div id="illu-zh">(插画)</div> <span className="name-tag" id="illu-name">: Ray</span></div>
+          <div id="host">主催 <NameTag id="host-name">: Akiaki</NameTag></div>
+          <div id="illu">イラスト<div id="illu-zh">(插画)</div> <NameTag id="illu-name">: Ray</NameTag></div>
         </div>
 
       </div>
