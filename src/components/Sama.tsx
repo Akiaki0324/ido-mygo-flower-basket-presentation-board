@@ -1,7 +1,7 @@
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
+import { DetailedHTMLProps, HTMLAttributes } from "react";
 
-export default function Sama({ children }: { children: React.ReactNode }) {
-    return (
-      <span className="sama">{children}</span>
-    )
-  }
+export default function Sama(props: DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>) {
+  return (
+    <span className="sama" {...props}>{props.children}</span>
+  )
+}

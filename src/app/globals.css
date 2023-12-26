@@ -9,6 +9,8 @@ body {
   margin: 0;
   font-size: 4vh;
   line-height: 1.5em;
+  color: azure;
+
 }
 
 @media print {
@@ -35,30 +37,34 @@ body {
   margin: auto;
   aspect-ratio: 297 / 210;
   height: 100vh;
-  background: linear-gradient(to top, #19a1c7, #0000a1);
+  /* background: #B0C4DE ; */
+  background-image: url('./bg.png');  
+  background-size: cover;
+  /* background: linear-gradient(to top, #19a1c7, #0000a1); */
   /* background: linear-gradient(143deg,  #77DD77 ,#19a1c7,#FF8899 85% ); */
   font-family: 'mikachan';
+
 }
+
 
 
 h1 {
   margin: 0;
   padding-top: 5vh;
   font-family: 'mikachan';
-  color: azure;
 }
 
 #t2 {
   margin-top: 1em;
   margin-bottom: 1em;
-  color: azure;
 }
 
 #guest {
-  line-height: 1.5em;
+  font-size: 7vh;
+  line-height: 1.2em;
   font-family: 'mikachan';
   margin: auto;
-  width: 60%;
+  width: 100%;
   margin-bottom: 1em;
 }
 
@@ -77,25 +83,25 @@ span.sama {
 }
 
 div#p {
-  line-height: 1.5em;
+  line-height: 2em;
 }
 
 span.name-tag {
-  color: azure;
-  font-family: 'mikachan';
+  font-family: 'mikachan','幼圆','黑体';
   white-space: nowrap;
   font-size: larger;
 }
 
 #special {
+  width: 80%;
   font-family: 'mikachan';
   position: relative;
-  bottom: -5vh;
+  bottom: 0vh;
   left: 0%;
   display: inline-block;
   height: 10vh;
   line-height: 1em;
-  color: azure;
+  font-size: 5vh;
 }
 
 #host {
